@@ -19,15 +19,15 @@ spring:
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: customerservice
   client:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-      defaultZone: http://localhost:8888/eureka/
+      defaultZone: http://customerservice:8888/eureka/
 
-# management:
-#   endpoints:
-#     web:
-#       exposure:
-#         include: "*"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

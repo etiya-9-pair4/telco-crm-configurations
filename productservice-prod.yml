@@ -2,7 +2,7 @@ spring:
   application:
     name: productservice
   datasource:
-    url: jdbc:postgresql://localhost:5432/product_db?sslmode=disable
+    url: jdbc:postgresql://localhost:5432/postgres?sslmode=disable
     username: my_user
     password: test
     driver-class-name: org.postgresql.Driver

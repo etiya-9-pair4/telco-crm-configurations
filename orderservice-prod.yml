@@ -8,14 +8,15 @@ spring:
 server:
   port: 8082
 
-  eureka:
+eureka:
+    url: http://localhost:8888
     instance:
-      hostname: orderservice
+      hostname: localhost
     client:
       register-with-eureka: true
       fetch-registry: true
       serviceUrl:
-        defaultZone: http://orderservice:8888/eureka/
+        defaultZone: http://localhost:8888/eureka/
 
 management:
   endpoints:

@@ -20,4 +20,5 @@ server:
 management:
   endpoints:
     web:
-      exposure: "*"
+      exposure:
+        include: "*"

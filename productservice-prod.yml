@@ -2,7 +2,7 @@ spring:
   application:
     name: productservice
   datasource:
-    url: jdbc:postgresql://telcocrm-productservice_db:5432/product_db?sslmode=disable
+    url: jdbc:postgresql://localhost:5432/product_db?sslmode=disable
     username: admin
     password: test
     driver-class-name: org.postgresql.Driver

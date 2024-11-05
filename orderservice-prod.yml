@@ -3,7 +3,7 @@ spring:
     name: orderservice
   data:
     mongodb:
-      uri: "mongodb://root:root@localhost:27017/order_db?authSource=admin"
+      uri: "mongodb://root:root@orderservice_db:27017/order_db?authSource=admin"
 
   cloud:
     stream:

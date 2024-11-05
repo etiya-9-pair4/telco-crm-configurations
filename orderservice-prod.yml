@@ -3,15 +3,21 @@ spring:
     name: orderservice
   data:
     mongodb:
-      uri: "mongodb://root:root@orderservice_db:27017/order_db?authSource=admin"
+      uri: "mongodb://root:root@localhost:27017/order_db?authSource=admin"
 
-  kafka:
-    bootstrapServer: "localhost:9092"
-    template:
-      default-topic: orderTopic
-    producer:
-      keySerializer: org.apache.kafka.common.serialization.StringSerializer
-      valueSerializer: org.springframework.kafka.support.serializer.JsonSerializer
+  cloud:
+    stream:
+      defaultBinder: kafka
+    function:
+      bindings:
+        orderCreatedEvent-out-0: order-topic
+    bindings:
+      orderCreatedEvent-out-0:
+        destination: order-topic
+        content-type: application/json
+    kafka:
+      binder:
+        brokers: localhost:9092
 
 server:
   port: 8082
